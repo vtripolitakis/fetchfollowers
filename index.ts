@@ -2,6 +2,8 @@ import createClient from "./client";
 import { userId, token } from "./config";
 import fetchBatchOfFollowers from "./fetchFollowers";
 import { IResult, IUser, IError } from "./interfaces";
+import fs from 'fs';
+
 
 const runner = async () => {
   const client = createClient(token);
@@ -35,6 +37,9 @@ const runner = async () => {
     }
     console.dir(outputData);
     console.log(outputData.length);
+
+    let fsData = JSON.stringify(outputData);
+    fs.writeFileSync('output.json', fsData);
   }
 };
 

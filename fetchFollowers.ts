@@ -1,4 +1,5 @@
 import TwitterApiv2ReadOnly from "twitter-api-v2/dist/esm/v2/client.v2.read";
+import { TRequestQuery } from "twitter-api-v2/dist/esm/types/request-maker.mixin.types";
 import { MAX_RESULTS } from "./config";
 import { IError, IResult } from "./interfaces";
 
@@ -8,10 +9,7 @@ const fetchBatchOfFollowers = async (
   next_token?: string
 ): Promise<IResult | IError> => {
   try {
-    let query: {
-      max_results: number;
-      pagination_token?: string;
-    } = {
+    let query: TRequestQuery = {
       max_results: MAX_RESULTS,
     };
 
