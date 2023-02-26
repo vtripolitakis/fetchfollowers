@@ -1,0 +1,5 @@
+const token =
+  "YOUR TOKEN GOES HERE";
+const userId = USER_ID_IN_NUMERIC_FORM_GOES HERE;
+const MAX_RESULTS = 1000;
+export { token, userId, MAX_RESULTS };
