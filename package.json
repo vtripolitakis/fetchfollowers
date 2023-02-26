@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "lodash": "^4.17.21",
     "twitter-api-v2": "^1.14.2"
   },
   "devDependencies": {

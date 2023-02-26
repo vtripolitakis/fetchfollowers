@@ -2,7 +2,7 @@ import createClient from "./client";
 import { userId, token } from "./config";
 import fetchBatchOfFollowers from "./fetchFollowers";
 import { IResult, IUser, IError } from "./interfaces";
-import fs from 'fs';
+var fs = require('fs');
 
 
 const runner = async () => {
